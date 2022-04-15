@@ -1,0 +1,36 @@
+{% extends "template.twig" %}
+
+{% block title %}
+    <title>Form</title>
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 mt-4">
+            <h4> Formulaire </h6>
+            <form action="" method="post">
+                <div class="mb-4">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" name="email" id="email" class="form-control" required>
+                </div>
+
+                <div class="mb-4">
+                    <label for="content" class="form-label">Mot de passe</label>
+                    <input type="password" name="password" id="password" class="form-control" required>
+                </div>
+
+                <div class="mb-4">
+                    <input type="submit" value="Envoyer" class="btn btn-success">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% if email != null %}
+    {{ email }}
+{% endif %}
+
+{% endblock %}
